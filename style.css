@@ -1,0 +1,267 @@
+/* Reset & basic styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-image: url('Images/newtravel.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #333;
+  line-height: 1.5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header, footer {
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header h1 {
+  color: #2c3e50;
+  font-size: 1.5rem;
+}
+
+nav a {
+  margin-left: 1rem;
+  text-decoration: none;
+  color: #2c3e50;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+nav a:hover {
+  color: #2980b9;
+}
+
+main {
+  flex: 1;
+  padding: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+footer {
+  border-top: 1px solid #ddd;
+  text-align: center;
+  padding: 1rem 2rem;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/* Buttons */
+button {
+  padding: 0.6rem 1.2rem;
+  background-color: #A4D9EB;
+  color: #2c3e50;
+  font-weight: 500;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #2c3e50;
+  color: #fff;
+}
+
+/* Forms */
+input, select {
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: 500;
+}
+
+/* Pages */
+.page {
+  display: none;
+  animation: fadeIn 0.3s ease;
+}
+
+.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Home page */
+.search-section {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  margin-bottom: 2rem;
+}
+
+.search-section h2 {
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+
+.travel-options {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.travel-options label {
+  flex: 1;
+  text-align: center;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.travel-options input[type="radio"] {
+  display: none;
+}
+
+.travel-options input[type="radio"]:checked + label {
+  background-color: #A4D9EB;
+  color: #2c3e50;
+  border-color: #A4D9EB;
+}
+
+.trip-list {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin: 10px;
+  border-radius: 10px;
+  list-style: none;
+  background-color: #eaeaea;
+}
+
+.trip-list h2{
+    margin-bottom: 10px;
+}
+
+/* Search results */
+.results-list {
+  list-style: none;
+  margin-top: 1rem;
+}
+
+.results-list li {
+  background-color: #fff;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
+}
+
+.results-list li:hover {
+  transform: translateY(-2px);
+}
+
+/* Previous trips */
+.trip-item {
+  background-color: #fff;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+/* Profile */
+.profile-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  gap: 100px;                     
+}
+
+.profile-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;             /* Make it a circle */
+  object-fit: cover;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.profile-info h3 {
+  margin: 0;
+}
+
+.profile-info p {
+  margin: 0;
+  color: #555;
+}
+
+.profile-info button {
+  margin-top: 8px;
+  padding: 8px 12px;
+  border: none;
+  background-color: #4cafef;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.profile-info button:hover {
+  background-color: #3a9edb;
+}
+
+.profile-card-envelope{
+    background-color: #fff;
+    padding: 25px;
+    margin: 10px;
+    border-radius: 12px;
+}
+
+.profile-card-envelope h2{
+    margin-bottom: 10px;
+}
+
+@media (max-width: 600px) {
+  .travel-options {
+    flex-direction: column;
+  }
+  .travel-options label {
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+  }
+}

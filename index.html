@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TravelHub - Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>TravelHub</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="previous.html">Previous Trips</a>
+      <a href="profile.html">Profile</a>
+    </nav>
+  </header>
+  <main>
+    <section class="search-section">
+      <h2>Book Your Trip</h2>
+      <label for="start">Start Location</label>
+      <input type="text" id="start" placeholder="Enter starting point">
+
+      <label for="destination">Destination</label>
+      <input type="text" id="destination" placeholder="Enter destination">
+
+      <div class="travel-options">
+        <input type="radio" id="car" name="travelType" value="Car" checked>
+        <label for="car">Car</label>
+
+        <input type="radio" id="train" name="travelType" value="Train">
+        <label for="train">Train</label>
+
+        <input type="radio" id="bus" name="travelType" value="Bus">
+        <label for="bus">Bus</label>
+      </div>
+
+      <button id="searchBtn">Search</button>
+    </section>
+
+    <ul id="searchResults" class="results-list"></ul>
+  </main>
+
+  <footer>
+    &copy; TravelHub. Frontend Website.
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
