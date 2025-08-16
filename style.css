@@ -47,6 +47,10 @@ nav a:hover {
   color: #2980b9;
 }
 
+nav a.activepage {
+  color: #2980b9;
+}
+
 main {
   flex: 1;
   padding: 2rem;
